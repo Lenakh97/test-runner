@@ -1,0 +1,16 @@
+{
+  "name": "testrunner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx tsx **/**.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tsx": "3.14.0",
+    "typescript": "5.2.2"
+  }
+}
