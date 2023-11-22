@@ -1,14 +1,9 @@
-export const expect2 = (result: any): { toBe: (expected: any) => boolean } => {
+export const expect2 = (result: any): { toBe: (expected: any) => void } => {
   return {
-    toBe: (expected: any): boolean => {
-      if (result === expected) {
-        console.log(`The results are as expected, ${result} === ${expected} `);
-        return true;
+    toBe: (expected: any): void => {
+      if (result !== expected) {
+        throw new Error(`❌ ${result} is not equal to ${expected}`);
       }
-      console.log(
-        `The results are not as expected, ${result} !== ${expected} `
-      );
-      return false;
     },
   };
 };
